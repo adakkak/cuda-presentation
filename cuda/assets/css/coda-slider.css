@@ -3,49 +3,51 @@ body {
     padding: 0; 
     font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 100%;
-    background-color: #EDEDEC;
+    background-color: #D5D5D5;
 }
 
 #wrapper {
-    width: 760px;
+    width: 90%;
+    padding-top: 20px;
     margin: 0 auto;
 }
 
-#intro {
-    padding-bottom: 10px;
+h1 {
+   font-family: "Georgia";
 }
 
 h2 {
+    font-family: "Georgia";
     margin: 0;
     margin-bottom: 14px;
     padding: 0;
 }
 
 #slider {
-    width: 620px;
+    width: 840px;
     margin: 0 auto;
     position: relative;
 }
 
 .scroll {
-    height: 250px;
-    width: 620px;
+    height: 100%;
+    width: 840px;
     overflow: auto;
     overflow-x: hidden;
     position: relative;
     clear: left;
-    background: #FFFFFF url(images/content_pane-gradient.gif) repeat-x scroll left bottom;
+    background: #F8F8F8 url(assets/img/content_pane-gradient.gif) repeat-x scroll left bottom;
 }
 
 .scrollContainer div.panel {
     padding: 20px;
-    height: 210px;
-    width: 580px;
+    height: 300px;
+    width: 800px;
 }
 
 #shade {
-    background: #EDEDEC url(images/shade.jpg) no-repeat 0 0;
-    height: 50px;
+    background: #888 url(assets/img/shade.jpg) no-repeat 0 0;
+    height: 20px;
 }
 
 ul.navigation {
@@ -80,16 +82,16 @@ ul.navigation a:focus {
 
 .scrollButtons {
     position: absolute;
-    top: 150px;
+    top: 365px;
     cursor: pointer;
 }
 
 .scrollButtons.left {
-    left: -20px;
+    left: 20px;
 }
 
 .scrollButtons.right {
-    right: -20px;
+    right: 40px;
 }
 
 .hide {

@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
@@ -61,157 +61,211 @@ charset="utf-8">
           "panel" id="CUDA">
             <h2>CUDA</h2>
 
-		<p> <h3>
-	    Finding new ways to utalize the <em>CUDA</em> chip. Whether by using CUDA in the CUBE or integrating it in Mathematica. </h3>
-	    </p>
+            <h3>Finding new ways to utalize the <em>CUDA</em> chip.
+            Whether by using CUDA in the CUBE or integrating it in
+            Mathematica.</h3>
 
-		<p>
-	    Project Members: <b>C. Boren</b>, <b>A. Dakkak</b>, 
-	    	<b>W. Davis</b>, and
-	    	<b>J. Shaber</b>.
-		</p>
-		<p>
-	    Advisors: <b>George Francis</b> and <b>Johnathan Manton</b>
-		</p>
+            <p>Project Members: <b>C. Boren</b>, <b>A. Dakkak</b>,
+            <b>W. Davis</b>, and <b>J. Shaber</b>.</p>
+
+            <p>Advisors: <b>George Francis</b> and <b>Johnathan
+            Manton</b></p>
           </div>
 
           <div style="float: left; position: relative;" class=
           "panel" id="overview">
             <h2>Overview</h2>
-		<ul>
-		<li>Fluidz: A split of FluidsGL</li>
-		<li>FluidzAR: A port of Fluidz to SZG</li>
-		<li>MandelbrotDy: A split of Mandelbrot</li>
-		<li>Cuda Mathematica(CM): Brining the Fluidz and MandelbrotDy client to Matica</li>
-		<li>Cuda <strike>Abstraction</strike> to Mathematica(CAM): Using CUDA as a coprocessor for Matica</li>
-		</ul>
 
+            <ul>
+              <li>Fluidz: A split of FluidsGL</li>
+
+              <li>FluidzAR: A port of Fluidz to SZG</li>
+
+              <li>MandelbrotDy: A split of Mandelbrot</li>
+
+              <li>Cuda Mathematica(CM): Brining the Fluidz and
+              MandelbrotDy client to Matica</li>
+
+              <li>Cuda <strike>Abstraction</strike> to
+              Mathematica(CAM): Using CUDA as a coprocessor for
+              Matica</li>
+            </ul>
           </div>
 
           <div style="float: left; position: relative;" class=
           "panel" id="introduction">
             <h2>Introduction</h2>
-		<ul>
-		<li>The GPU's speed has been increasing steadily over the past decade, while the amount of processor cores and their speed have been constant over the past few years.<li>
-		<li>The GPU's architecture is SIMD</li>
-		<li>Low price, while offering high performace (the democratization of super computers)</li>
-		<li>Cuda is a lanuage for the NVIDIA GPU</li>
-		</ul>
+
+            <ul>
+              <li>The GPU's speed has been increasing steadily over
+              the past decade, while the amount of processor cores
+              and their speed have been constant over the past few
+              years.</li>
+
+              <li>The GPU's architecture is SIMD</li>
+
+              <li>Low price, while offering high performace (the
+              democratization of super computers)</li>
+
+              <li>Cuda is a lanuage for the NVIDIA GPU</li>
+            </ul>
           </div>
 
           <div style="float: left; position: relative;" class=
           "panel" id="new">
-            <h2>New</h2>
+            <h2>New</h2>Since the summer, the NVIDIA was able to
 
-	  Since the summer, the NVIDIA was able to
-	  <ul>
-	  <li>
-	  Support <a href="http://www.nvidia.com/object/cuda_learn_products.html">more</a> graphics cards
-	  </li>
-	  <li>
-	  Release a new <a href="http://www.nvidia.com/object/cuda_get.html">version</a> of their SDK and Toolkit
-	  </li>
-	  <li>
-	  Support for <a href="http://www.ddj.com/hpc-high-performance-computing/210102115">double precision</a> on their 200-series cards
-	  <li>
-	  </ul>
+            <ul>
+              <li>Support <a href=
+              "http://www.nvidia.com/object/cuda_learn_products.html">
+              more</a> graphics cards</li>
 
-	  The community, on the other hand, was able to
-	  <ul>
-	  <li>
-	  Develop 
-	  <a href="http://javagl.de/jcuda/jcublas/JCublas.html">
-	  Java</a>
-	   and 
-	   <a href="http://mathema.tician.de/software/pycuda">Python</a>
-	    bindings
-	    </li>
-	    <li> Extend the linear algebra library</li>
-	    <li>And <a href="http://www.nvidia.com/object/cuda_home.html#"> more</a></li>
-	    </ul>
+              <li>Release a new <a href=
+              "http://www.nvidia.com/object/cuda_get.html">version</a>
+              of their SDK and Toolkit</li>
+
+              <li>Support for <a href=
+              "http://www.ddj.com/hpc-high-performance-computing/210102115">
+              double precision</a> on their 200-series cards</li>
+            </ul>The community, on the other hand, was able to
+
+            <ul>
+              <li>Develop <a href=
+              "http://javagl.de/jcuda/jcublas/JCublas.html">Java</a>
+              and <a href=
+              "http://mathema.tician.de/software/pycuda">Python</a>
+              bindings</li>
+
+              <li>Extend the linear algebra library</li>
+
+              <li>And <a href=
+              "http://www.nvidia.com/object/cuda_home.html#">more</a></li>
+            </ul>
           </div>
 
           <div style="float: left; position: relative;" class=
           "panel" id="fluidz">
             <h2>Fluidz</h2>
-		<ul>
-		<li>Jared Shaber's spliting of the FluidsGL program found
-		in the Cuda SDK</li>
-		<li>First to show that one can use CUDA as a computational
-		platform</li>
-		<li>Use of <tt>MSG_WAITAL</tt> made it not work on Windows</li>
-		</ul>
-		<h3>Demonstration</h3>
+
+            <ul>
+              <li>Jared Shaber's spliting of the FluidsGL program
+              found in the Cuda SDK</li>
+
+              <li>First to show that one can use CUDA as a
+              computational platform</li>
+
+              <li>Use of <tt>MSG_WAITAL</tt> made it not work on
+              Windows</li>
+            </ul>
+
+            <h3>Demonstration</h3>
           </div>
 
           <div style="float: left; position: relative;" class=
           "panel" id="cfluidz">
             <h2>Cave Fluidz</h2>
-		<ul>
-		<li>Will Davis and Chase Boren's port of Shaber's Fluidz to the CAVE</li>
-		<li>First Cuda program to run in the CAVE</li>
-		<li>Summarizing by an attempt to find a way around using 
-		<tt>MSG_WAITAL</tt></li>
-		<li>SZG exposed a few of Cuda's bugs</li>
-		</ul>
-		<h3>Demonstration</h3>
+
+            <ul>
+              <li>Will Davis and Chase Boren's port of Shaber's
+              Fluidz to the CAVE</li>
+
+              <li>First Cuda program to run in the CAVE</li>
+
+              <li>Summarizing by an attempt to find a way around
+              using <tt>MSG_WAITAL</tt></li>
+
+              <li>SZG exposed a few of Cuda's bugs</li>
+            </ul>
+
+            <h3>Demonstration</h3>
           </div>
 
           <div style="float: left; position: relative;" class=
           "panel" id="mandel">
             <h2>MandelbrotDy</h2>
 
-		<ul>
-		<li>My attempt at showing Kattie Poon and Dr. Francis how to split a Cuda Program</li>
-		<li>Used <tt>MSG_WAITAL</tt></li>
-		</ul>
-		<h3>Demonstration</h3>
+            <ul>
+              <li>My attempt at showing Kattie Poon and Dr. Francis
+              how to split a Cuda Program</li>
+
+              <li>Used <tt>MSG_WAITAL</tt></li>
+            </ul>
+
+            <h3>Demonstration</h3>
           </div>
 
           <div style="float: left; position: relative;" class=
           "panel" id="cm">
             <h2>Cuda Mathematica</h2>
-		<ul>
-		<li>Using Mathematica, rather than a custom OpenGL client, as the rendering engine for the client.</li>
-		<li>Used Mathlink and Mathematica 6</li>
-		<li>Does not seem to be compatible with Mathematica 7</li>
-		<li>Ported both the MandelbrotDy and Fluidz clients to CM</li>
-		</ul>
-		<h3>Demonstration</h3>
+
+            <ul>
+              <li>Using Mathematica, rather than a custom OpenGL
+              client, as the rendering engine for the client.</li>
+
+              <li>Used Mathlink and Mathematica 6</li>
+
+              <li>Does not seem to be compatible with Mathematica
+              7</li>
+
+              <li>Ported both the MandelbrotDy and Fluidz clients
+              to CM</li>
+            </ul>
+
+            <h3>Demonstration</h3>
           </div>
 
           <div style="float: left; position: relative;" class=
           "panel" id="cam">
-            <h2>Cuda <strike>Abstraction</strike> to Mathematica</h2>
+            <h2>Cuda <strike>Abstraction</strike> to
+            Mathematica</h2>
 
-		<ul>
-		<li>Using Cuda as a computational engine for specific Mathematica functions.</li>
-		<li>Able to perform FFT/IFFT (via CUFFT) and Matrix Multiplication (via <tt>sgemm</tt> in CUBLAS).</li>
-		<li>Matlab had something similar for FFT, but their implementation was trivial since both Matlab's FFT and CUFFT are versions of FFTW</li>
-		<li>Alpha: Still Buggy</li>
-		</ul>
-		<h3>Demonstration</h3>
+            <ul>
+              <li>Using Cuda as a computational engine for specific
+              Mathematica functions.</li>
+
+              <li>Able to perform FFT/IFFT (via CUFFT) and Matrix
+              Multiplication (via <tt>sgemm</tt> in CUBLAS).</li>
+
+              <li>Matlab had something similar for FFT, but their
+              implementation was trivial since both Matlab's FFT
+              and CUFFT are versions of FFTW</li>
+
+              <li>Alpha: Still Buggy</li>
+            </ul>
+
+            <h3>Demonstration</h3>
           </div>
 
           <div style="float: left; position: relative;" class=
           "panel" id="lessons">
             <h2>Lessons Learned</h2>
-		<ul>
-		<li>It is no fun writing a client/server RPC everytime you want to split a program.</li>
-		<li>The Cuda toolkit, at least version 1.1, has many bugs.</li>
-		<li>Writing Cuda programs is straigh forward, but optimization is tricky.</li>
-		</ul>
+
+            <ul>
+              <li>It is no fun writing a client/server RPC
+              everytime you want to split a program.</li>
+
+              <li>The Cuda toolkit, at least version 1.1, has many
+              bugs.</li>
+
+              <li>Writing Cuda programs is straigh forward, but
+              optimization is tricky.</li>
+            </ul>
           </div>
 
           <div style="float: left; position: relative;" class=
           "panel" id="future">
             <h2>Future</h2>
-		<ul>
-		<li>Use Apache/Facebook's Thrift to generate RPC. Demo.</li>
-		<li>Install the new Toolkit and SDK.</li>
-		<li>Migrate code to the new SDK.</li>
-		<li>Split the particles program.</li>
-		</ul>
+
+            <ul>
+              <li>Use Apache/Facebook's Thrift to generate RPC.
+              Demo.</li>
+
+              <li>Install the new Toolkit and SDK.</li>
+
+              <li>Migrate code to the new SDK.</li>
+
+              <li>Split the particles program.</li>
+            </ul>
           </div>
         </div>
       </div><img class="scrollButtons right" src=

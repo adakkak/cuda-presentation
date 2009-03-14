@@ -31,21 +31,19 @@ charset="utf-8">
   <div id="wrapper">
     <div id="slider">
       <ul class="navigation">
-        <li><a class="selected" href="#cuda">CUDA</a></li>
+        <li><a class="selected" href="#cuda">-</a></li>
 
-        <li><a class="" href="#overview">Overview</a></li>
+        <li><a class="" href="#overview">Over</a></li>
 
-        <li><a class="" href="#introduction">Introduction</a></li>
+        <li><a class="" href="#introduction">Intro</a></li>
 
         <li><a class="" href="#new">New</a></li>
 
-        <li><a class="" href="#terminology">Terminology</a></li>
-
         <li><a class="" href="#fluidz">Fluidz</a></li>
 
-        <li><a class="" href="#cfluidz">CUBE Fluidz</a></li>
+        <li><a class="" href="#cfluidz">CFluidz</a></li>
 
-        <li><a class="" href="#mandel">MandelDy</a></li>
+        <li><a class="" href="#mandel">Mandel</a></li>
 
         <li><a class="" href="#cm">CM</a></li>
 
@@ -63,8 +61,8 @@ charset="utf-8">
           "panel" id="CUDA">
             <h2>CUDA</h2>
 
-		<p>
-	    Finding new ways of utalizing the <em>CUDA</em> chip. Whether by using CUDA in the CUBE or integrating it in Mathematica.
+		<p> <h3>
+	    Finding new ways to utalize the <em>CUDA</em> chip. Whether by using CUDA in the CUBE or integrating it in Mathematica. </h3>
 	    </p>
 
 		<p>
@@ -93,152 +91,125 @@ charset="utf-8">
           <div style="float: left; position: relative;" class=
           "panel" id="introduction">
             <h2>Introduction</h2>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu
-            fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia
-            deserunt mollit anim id est laborum.</p>
+		<ul>
+		<li>The GPU's speed has been increasing steadily over the past decade, while the amount of processor cores and their speed have been constant over the past few years.<li>
+		<li>The GPU's architecture is SIMD</li>
+		<li>Low price, while offering high performace (the democratization of super computers)</li>
+		<li>Cuda is a lanuage for the NVIDIA GPU</li>
+		</ul>
           </div>
 
           <div style="float: left; position: relative;" class=
           "panel" id="new">
             <h2>New</h2>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu
-            fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia
-            deserunt mollit anim id est laborum.</p>
-          </div>
+	  Since the summer, the NVIDIA was able to
+	  <ul>
+	  <li>
+	  Support <a href="http://www.nvidia.com/object/cuda_learn_products.html">more</a> graphics cards
+	  </li>
+	  <li>
+	  Release a new <a href="http://www.nvidia.com/object/cuda_get.html">version</a> of their SDK and Toolkit
+	  </li>
+	  <li>
+	  Support for <a href="http://www.ddj.com/hpc-high-performance-computing/210102115">double precision</a> on their 200-series cards
+	  <li>
+	  </ul>
 
-          <div style="float: left; position: relative;" class=
-          "panel" id="terminology">
-            <h2>Terminology</h2>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu
-            fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia
-            deserunt mollit anim id est laborum.</p>
+	  The community, on the other hand, was able to
+	  <ul>
+	  <li>
+	  Develop 
+	  <a href="http://javagl.de/jcuda/jcublas/JCublas.html">
+	  Java</a>
+	   and 
+	   <a href="http://mathema.tician.de/software/pycuda">Python</a>
+	    bindings
+	    </li>
+	    <li> Extend the linear algebra library</li>
+	    <li>And <a href="http://www.nvidia.com/object/cuda_home.html#"> more</a></li>
+	    </ul>
           </div>
 
           <div style="float: left; position: relative;" class=
           "panel" id="fluidz">
             <h2>Fluidz</h2>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu
-            fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia
-            deserunt mollit anim id est laborum.</p>
+		<ul>
+		<li>Jared Shaber's spliting of the FluidsGL program found
+		in the Cuda SDK</li>
+		<li>First to show that one can use CUDA as a computational
+		platform</li>
+		<li>Use of <tt>MSG_WAITAL</tt> made it not work on Windows</li>
+		</ul>
+		<h3>Demonstration</h3>
           </div>
 
           <div style="float: left; position: relative;" class=
           "panel" id="cfluidz">
             <h2>Cave Fluidz</h2>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu
-            fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia
-            deserunt mollit anim id est laborum.</p>
+		<ul>
+		<li>Will Davis and Chase Boren's port of Shaber's Fluidz to the CAVE</li>
+		<li>First Cuda program to run in the CAVE</li>
+		<li>Summarizing by an attempt to find a way around using 
+		<tt>MSG_WAITAL</tt></li>
+		<li>SZG exposed a few of Cuda's bugs</li>
+		</ul>
+		<h3>Demonstration</h3>
           </div>
 
           <div style="float: left; position: relative;" class=
-          "panel" id="mandelbrot">
+          "panel" id="mandel">
             <h2>MandelbrotDy</h2>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu
-            fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia
-            deserunt mollit anim id est laborum.</p>
+		<ul>
+		<li>My attempt at showing Kattie Poon and Dr. Francis how to split a Cuda Program</li>
+		<li>Used <tt>MSG_WAITAL</tt></li>
+		</ul>
+		<h3>Demonstration</h3>
           </div>
 
           <div style="float: left; position: relative;" class=
           "panel" id="cm">
-            <h2>CM</h2>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu
-            fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia
-            deserunt mollit anim id est laborum.</p>
+            <h2>Cuda Mathematica</h2>
+		<ul>
+		<li>Using Mathematica, rather than a custom OpenGL client, as the rendering engine for the client.</li>
+		<li>Used Mathlink and Mathematica 6</li>
+		<li>Ported both the MandelbrotDy and Fluidz clients to CM</li>
+		</ul>
+		<h3>Demonstration</h3>
           </div>
 
           <div style="float: left; position: relative;" class=
           "panel" id="cam">
-            <h2>CAM</h2>
+            <h2>Cuda <strike>Abstraction</strike> to Mathematica</h2>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu
-            fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia
-            deserunt mollit anim id est laborum.</p>
+		<ul>
+		<li>Using Cuda as a computational engine for specific Mathematica functions.</li>
+		<li>Able to perform FFT/IFFT (via CUFFT) and Matrix Multiplication (via <tt>sgemm</tt> in CUBLAS).</li>
+		<li>Matlab had something similar for FFT, but their implementation was trivial since both Matlab's FFT and CUFFT are versions of FFTW</li>
+		<li>Alpha: Still Buggy</li>
+		</ul>
+		<h3>Demonstration</h3>
           </div>
 
           <div style="float: left; position: relative;" class=
           "panel" id="lessons">
             <h2>Lessons Learned</h2>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu
-            fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia
-            deserunt mollit anim id est laborum.</p>
+		<ul>
+		<li>It is no fun writing a client/server RPC everytime you want to split a program.</li>
+		<li>The Cuda toolkit, at least version 1.1, has many bugs.</li>
+		<li>Writing Cuda programs is straigh forward, but optimization is tricky.</li>
+		</ul>
           </div>
 
           <div style="float: left; position: relative;" class=
           "panel" id="future">
             <h2>Future</h2>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu
-            fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia
-            deserunt mollit anim id est laborum. <a href=
-            "#sites">And some sites</a></p>
+		<ul>
+		<li>Use Apache/Facebook's Thrift to generate RPC. Demo.</li>
+		<li>Install the new Toolkit and SDK.</li>
+		<li>Migrate code to the new SDK.</li>
+		</ul>
           </div>
         </div>
       </div><img class="scrollButtons right" src=

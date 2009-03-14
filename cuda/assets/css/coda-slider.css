@@ -16,7 +16,7 @@ h1 {
 
 h2 {
     font-family: "Palatino Linotype", "Book Antiqua", "Palatino", "Georgia", serif;
-    font-size: 60px;
+    font-size: 40px;
     text-align: center;
     color: #F8F8F8;
     background-color: #555;
@@ -25,15 +25,26 @@ h2 {
     padding: 1px;
 }
 
+h3 {
+    font-family: "Georgia";
+    font-size: 20px;
+    text-align: right;
+    color: #555;
+    background-color: #DDD;
+    margin: 10px;
+    margin-top: 80px;
+    padding: 1px;
+}
+
 #slider {
-    width: 870px;
+    width: 760px;
     margin: 0 auto;
     position: relative;
 }
 
 .scroll {
     height: 100%;
-    width: 870px;
+    width: 760px;
     overflow: auto;
     overflow-x: hidden;
     position: relative;
@@ -44,8 +55,8 @@ h2 {
 .scrollContainer div.panel {
     padding: 20px;
     height: 330px;
-    width: 840px;
-    font-size: 20px;
+    width: 720px;
+    font-size: 15px;
 }
 
 #shade {
@@ -57,7 +68,7 @@ ul.navigation {
     list-style: none;
     margin: 0;
     padding: 0;
-    padding-bottom: 5px;
+    padding-bottom: 2px;
 }
 
 ul.navigation li {
@@ -66,7 +77,7 @@ ul.navigation li {
 }
 
 ul.navigation a {
-    padding: 5px;
+    padding: 2px;
     color: #000;
     text-decoration: none;
 }
@@ -85,7 +96,7 @@ ul.navigation a:focus {
 
 .scrollButtons {
     position: absolute;
-    top: 393px;
+    top: 395px;
     cursor: pointer;
 }
 

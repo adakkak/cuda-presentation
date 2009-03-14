@@ -1,38 +1,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv="imagetoolbar" content="no">
-	<title>JViz</title>
-	<style type="text/css">
-		body { font-family: sans-serif; font-weight: bold; font-size: .8em; }
-		body { border: 0px; margin: 0px; padding: 0px; }
-		#map { width: 85%; height: 85%; border: 0px; padding: 0px; }
-	</style>
-	<script src="js/jquery-1.3.2/dist/jquery.js"></script>
-	<script src="js/OpenLayers-2.7/OpenLayers.js"></script>
-	<script type="text/javascript">
-		OpenLayers.Util.onImageLoadErrorColor = 'transparent';
-		var map, layer;
-		function init(){
-			var mapOptions = { 
-				maxResolution: 156543.03390625,
-				numZoomLevels: 31,
-				projection: new OpenLayers.Projection('EPSG:900913'),
-				maxExtent: new OpenLayers.Bounds(-2.003750834E7,-2.003750834E7,2.003750834E7,2.003750834E7) 
-			};
-			map = new OpenLayers.Map('map', mapOptions );
-			var demolayer = new OpenLayers.Layer.WMS(
-				"openstreetmap","http://demo.opengeo.org/geoserver_openstreetmap/gwc/service/wms",
-				{layers: 'openstreetmap', format: 'image/png'} );
-			var ipslayer = new OpenLayers.Layer.WMS(
-				"ips","http://localhost:8080/geoserver/wms",
-				{layers: 'mine:ips', format: 'image/png'} );
-			map.addLayer(ipslayer);
-			map.addLayer(demolayer);
-			map.zoomToExtent(new OpenLayers.Bounds(-2.003750834E7,-2.0037497010456856E7,2.003750834E7,2.003749701045685E7));
-		}
-	</script>
+  <meta http-equiv="imagetoolbar" content="no">
+  <title>baREUcuda</title>
+  <style type="text/css">
+    body { font-family: sans-serif; font-weight: bold; font-size: .8em; }
+    body { border: 0px; margin: 0px; padding: 0px; }
+    #map { width: 85%; height: 85%; border: 0px; padding: 0px; }
+  </style>
+  <script src="js/jquery-1.3.2/dist/jquery.js"></script>
+  <script src="js/mine.js"></script>
 </head>
-<body onload="init()">
-	<div id="map"></div>
+<body>
+  <div class="content">
+    <ul class="slides">
+    </ul>
+  </div>
 </body>
 </html>

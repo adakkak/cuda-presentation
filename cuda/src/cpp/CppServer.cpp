@@ -14,7 +14,7 @@ using namespace apache::thrift::server;
 
 using boost::shared_ptr;
 
-using namespace example;
+using namespace split;
 
 class SplitHandler : virtual public SplitIf {
  public:
@@ -27,19 +27,24 @@ class SplitHandler : virtual public SplitIf {
     printf("display\n");
   }
 
-  void keyboardEventFunc(const KeyboardEvent& e) {
+  void keyboardEventFunc(const int8_t key, const int16_t x, const int16_t y) {
     // Your implementation goes here
     printf("keyboardEventFunc\n");
   }
 
-  void mouseEventFunc(const MouseEvent& e) {
+  void mouseEventFunc(const int16_t button, const int16_t x, const int16_t y) {
     // Your implementation goes here
     printf("mouseEventFunc\n");
   }
 
-  void mouseMotionFunc(const MotionEvent& e) {
+  void mouseMotionFunc(const int16_t x, const int16_t y) {
     // Your implementation goes here
     printf("mouseMotionFunc\n");
+  }
+
+  void reshapeFunc(const int16_t x, const int16_t y) {
+    // Your implementation goes here
+    printf("reshapeFunc\n");
   }
 
   void idle() {

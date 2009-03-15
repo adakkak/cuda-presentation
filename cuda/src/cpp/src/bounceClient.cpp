@@ -25,6 +25,20 @@ using namespace split;
 
 using namespace boost;
 
+shared_ptr<TTransport> socket(new TSocket("localhost", 9090));
+shared_ptr<TTransport> transport(new TBufferedTransport(socket));
+shared_ptr<TProtocol> protocol(new TBinaryProtocol(transport));
+SplitClient client(protocol);
+
+try {
+  transport->open();
+
+  client.keyboardEventFunc(1, 1, 1);
+
+  transport->close();
+} catch (TException &tx) {
+  printf("ERROR: %s\n", tx.what());
+}
 
 // Initial square position and size
 GLfloat x = 0.0f;
@@ -65,37 +79,7 @@ RenderScene (void)
 void
 TimerFunction (int value)
 {
-  // Reverse direction when you reach left or right edge
-  if (x > windowWidth - rsize || x < -windowWidth)
-    xstep = -xstep;
-
-  // Reverse direction when you reach top or bottom edge
-  if (y > windowHeight || y < -windowHeight + rsize)
-    ystep = -ystep;
-
-  // Actually move the square
-  x += xstep;
-  y += ystep;
-
-  // Check bounds. This is in case the window is made
-  // smaller while the rectangle is bouncing and the 
-  // rectangle suddenly finds itself outside the new
-  // clipping volume
-  if (x > (windowWidth - rsize + xstep))
-    x = windowWidth - rsize - 1;
-  else if (x < -(windowWidth + xstep))
-    x = -windowWidth - 1;
-
-  if (y > (windowHeight + ystep))
-    y = windowHeight - 1;
-  else if (y < -(windowHeight - rsize + ystep))
-    y = -windowHeight + rsize - 1;
-
-
-
-  // Redraw the scene with new coordinates
-  glutPostRedisplay ();
-  glutTimerFunc (33, TimerFunction, 1);
+  client.idle();
 }
 
 
@@ -114,36 +98,7 @@ SetupRC (void)
 void
 ChangeSize (int w, int h)
 {
-  GLfloat aspectRatio;
-
-  // Prevent a divide by zero
-  if (h == 0)
-    h = 1;
-
-  // Set Viewport to window dimensions
-  glViewport (0, 0, w, h);
-
-  // Reset coordinate system
-  glMatrixMode (GL_PROJECTION);
-  glLoadIdentity ();
-
-  // Establish clipping volume (left, right, bottom, top, near, far)
-  aspectRatio = (GLfloat) w / (GLfloat) h;
-  if (w <= h)
-    {
-      windowWidth = 100;
-      windowHeight = 100 / aspectRatio;
-      glOrtho (-100.0, 100.0, -windowHeight, windowHeight, 1.0, -1.0);
-    }
-  else
-    {
-      windowWidth = 100 * aspectRatio;
-      windowHeight = 100;
-      glOrtho (-windowWidth, windowWidth, -100.0, 100.0, 1.0, -1.0);
-    }
-
-  glMatrixMode (GL_MODELVIEW);
-  glLoadIdentity ();
+ client.reshapeFunc(w, h);
 }
 
 ///////////////////////////////////////////////////////////

@@ -26,7 +26,6 @@ using namespace split;
 using namespace std;
 
 
-
 class SplitHandler:virtual public SplitIf {
   public:
 // Initial square position and size
@@ -43,14 +42,14 @@ class SplitHandler:virtual public SplitIf {
     float windowWidth;
     float windowHeight;
     SplitHandler() {
-	x = 0.0f;
-	y = 0.0f;
-	rsize = 25;
+        x = 0.0f;
+        y = 0.0f;
+        rsize = 25;
 
-// Step size in x and y directions
-// (number of pixels to move each time)
-	xstep = 1.0f;
-	ystep = 1.0f;
+    // Step size in x and y directions
+    // (number of pixels to move each time)
+        xstep = 1.0f;
+        ystep = 1.0f;
     }
     
     float rand_float() {
@@ -60,8 +59,7 @@ class SplitHandler:virtual public SplitIf {
     void display(string & _return) {
 	ostringstream result;
 	result << "color,";
-	result << rand_float() << "," << rand_float() << "," <<
-	    rand_float() << endl;
+	result << rand_float() << "," << rand_float() << "," << rand_float() << endl;
 
 	result << "rect,";
 	result << x << "," << y << "," << x + rsize << "," << y - rsize;

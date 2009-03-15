@@ -44,10 +44,10 @@ GLfloat windowHeight;
 // Called to draw scene
 void RenderScene(void)
 {
-    string s;
-    client->display(s);
+    string to_draw;
+    client->display(to_draw);
     vector < string > splitVec;
-    boost::split(splitVec, s, boost::is_any_of("\n"));
+    boost::split(splitVec, to_draw, boost::is_any_of("\n"));
 
     glClear(GL_COLOR_BUFFER_BIT);
 
@@ -104,8 +104,6 @@ void SetupRC(void)
 // Called by GLUT library when the window has chanaged size
 void ChangeSize(int w, int h)
 {
-    cout << "in reshape " << w << ", " << h << endl;
-    client->reshapeFunc(w, h);
     GLfloat aspectRatio;
 
     // Prevent a divide by zero
@@ -130,6 +128,8 @@ void ChangeSize(int w, int h)
 	windowHeight = 100;
 	glOrtho(-windowWidth, windowWidth, -100.0, 100.0, 1.0, -1.0);
     }
+    cout << "in reshape " << w << ", " << h << endl;
+    client->reshapeFunc(windowWidth, windowHeight);
 
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();

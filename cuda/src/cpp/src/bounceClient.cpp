@@ -6,6 +6,25 @@
 
 #include "shared/gltools.h"	// OpenGL toolkit
 
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/time.h>
+
+#include <protocol/TBinaryProtocol.h>
+#include <transport/TSocket.h>
+#include <transport/TTransportUtils.h>
+
+#include "../gen-cpp/Split.h"
+
+using namespace std;
+using namespace apache::thrift;
+using namespace apache::thrift::protocol;
+using namespace apache::thrift::transport;
+
+using namespace split;
+
+using namespace boost;
+
 
 // Initial square position and size
 GLfloat x = 0.0f;

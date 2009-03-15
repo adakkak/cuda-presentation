@@ -28,10 +28,10 @@ math3d.o : $(SHAREDPATH)math3d.cpp
 gltools.o : $(SHAREDPATH)gltools.cpp
 
 bounceServer : bounceServer.o gltools.o math3d.o
-	$(CC) $(CFLAGS) -o bounceServer $(LIBDIRS) $(SRCPATH)bounceServer.cpp $(SHAREDPATH)math3d.cpp $(SHAREDPATH)gltools.cpp $(SHAREDPATH)GLee.c $(LIBS) $(GEN_SRC)
+	$(CC) $(CFLAGS) -o bounceServer $(LIBDIRS) $(SRCPATH)bounceServer.cpp $(SHAREDPATH)math3d.cpp $(SHAREDPATH)gltools.cpp $(SHAREDPATH)GLee.c $(LIBS)
 
 bounceClient : bounceClient.o gltools.o math3d.o
-	$(CC) $(CFLAGS) -o bounceClient $(LIBDIRS) $(SRCPATH)bounceClient.cpp $(SHAREDPATH)math3d.cpp $(SHAREDPATH)gltools.cpp $(SHAREDPATH)GLee.c $(LIBS) $(GEN_SRC)
+	$(CC) $(CFLAGS) -o bounceClient $(LIBDIRS) $(SRCPATH)bounceClient.cpp $(SHAREDPATH)math3d.cpp $(SHAREDPATH)gltools.cpp $(SHAREDPATH)GLee.c $(LIBS)
 
 clean:
 	rm -f *.o bounceClient bounceServer

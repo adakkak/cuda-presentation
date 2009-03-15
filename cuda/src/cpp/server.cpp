@@ -16,6 +16,7 @@ using boost::shared_ptr;
 
 using namespace split;
 
+char data[] = "this is a test\n";
 class SplitHandler : virtual public SplitIf {
  public:
   SplitHandler() {
@@ -24,6 +25,7 @@ class SplitHandler : virtual public SplitIf {
 
   void display(std::string& _return) {
     // Your implementation goes here
+    _return = data;
     printf("display\n");
   }
 

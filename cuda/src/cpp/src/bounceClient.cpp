@@ -22,7 +22,7 @@ using namespace apache::thrift::transport;
 using namespace split;
 
 using namespace boost;
-//
+
 SplitClient *client;
 
 // Initial square position and size
@@ -53,29 +53,29 @@ void RenderScene(void)
 
     vector < string > commandVec;
     for (vector < string >::iterator line = splitVec.begin();
-	 line != splitVec.end(); ++line) {
-	boost::split(commandVec, *line, boost::is_any_of(","));
-	if (commandVec.empty()) {
-	    continue;
-	}
-	if (commandVec[0].compare("color") == 0) {
+            line != splitVec.end(); ++line) {
+        boost::split(commandVec, *line, boost::is_any_of(","));
+        if (commandVec.empty()) {
+            continue;
+        }
+        if (commandVec[0].compare("color") == 0) {
 
-	    float r = boost::lexical_cast < float >(commandVec[1]);
-	    float g = boost::lexical_cast < float >(commandVec[2]);
-	    float b = boost::lexical_cast < float >(commandVec[3]);
+            float r = boost::lexical_cast < float >(commandVec[1]);
+            float g = boost::lexical_cast < float >(commandVec[2]);
+            float b = boost::lexical_cast < float >(commandVec[3]);
 
-	    glColor3f(r, g, b);
-	} else if (commandVec[0].compare("rect") == 0) {
+            glColor3f(r, g, b);
+        } else if (commandVec[0].compare("rect") == 0) {
 
-	    float x = boost::lexical_cast < float >(commandVec[1]);
-	    float y = boost::lexical_cast < float >(commandVec[2]);
-	    float w = boost::lexical_cast < float >(commandVec[3]);
-	    float h = boost::lexical_cast < float >(commandVec[4]);
+            float x = boost::lexical_cast < float >(commandVec[1]);
+            float y = boost::lexical_cast < float >(commandVec[2]);
+            float w = boost::lexical_cast < float >(commandVec[3]);
+            float h = boost::lexical_cast < float >(commandVec[4]);
 
-	    glRectf(x, y, w, h);
-	} else {
-	    cout << "Unknown command " << commandVec[0] << endl;
-	}
+            glRectf(x, y, w, h);
+        } else {
+            cout << "Unknown command " << commandVec[0] << endl;
+        }
     }
     glutSwapBuffers();
 }
@@ -108,7 +108,7 @@ void ChangeSize(int w, int h)
 
     // Prevent a divide by zero
     if (h == 0)
-	h = 1;
+        h = 1;
 
     // Set Viewport to window dimensions
     glViewport(0, 0, w, h);
@@ -120,13 +120,13 @@ void ChangeSize(int w, int h)
     // Establish clipping volume (left, right, bottom, top, near, far)
     aspectRatio = (GLfloat) w / (GLfloat) h;
     if (w <= h) {
-	windowWidth = 100;
-	windowHeight = 100 / aspectRatio;
-	glOrtho(-100.0, 100.0, -windowHeight, windowHeight, 1.0, -1.0);
+        windowWidth = 100;
+        windowHeight = 100 / aspectRatio;
+        glOrtho(-100.0, 100.0, -windowHeight, windowHeight, 1.0, -1.0);
     } else {
-	windowWidth = 100 * aspectRatio;
-	windowHeight = 100;
-	glOrtho(-windowWidth, windowWidth, -100.0, 100.0, 1.0, -1.0);
+        windowWidth = 100 * aspectRatio;
+        windowHeight = 100;
+        glOrtho(-windowWidth, windowWidth, -100.0, 100.0, 1.0, -1.0);
     }
     cout << "in reshape " << w << ", " << h << endl;
     client->reshapeFunc(windowWidth, windowHeight);
@@ -148,10 +148,10 @@ int main(int argc, char *argv[])
     shared_ptr < TProtocol > protocol(new TBinaryProtocol(transport));
     client = new SplitClient(protocol);
     try {
-	transport->open();
+        transport->open();
 
-    } catch(TException & tx) {
-	printf("ERROR: %s\n", tx.what());
+    } catch (TException & tx) {
+        printf("ERROR: %s\n", tx.what());
     }
     glutDisplayFunc(RenderScene);
     glutReshapeFunc(ChangeSize);

@@ -33,7 +33,7 @@ bounce : bounce.o
 	$(CC) $(CFLAGS) -o bounce $(LIBDIRS) $(SRCPATH)bounce.cpp $(SHAREDPATH)math3d.cpp $(SHAREDPATH)gltools.cpp $(SHAREDPATH)GLee.c $(LIBS)
 
 bounceServer : bounceServer.o gltools.o math3d.o
-	$(CC) $(CFLAGS) -o bounceServer $(LIBDIRS) $(SRCPATH)bounceServer.cpp $(SHAREDPATH)math3d.cpp $(SHAREDPATH)gltools.cpp $(SHAREDPATH)GLee.c $(LIBS)
+	$(CC) $(CFLAGS) -o bounceServer $(LIBDIRS) $(SRCPATH)bounceServer.cpp $(LIBS) $(GEN_SRC)
 
 bounceClient : bounceClient.o
 	$(CC) $(CFLAGS) -o bounceClient $(LIBDIRS) $(SRCPATH)bounceClient.cpp $(LIBS) $(GEN_SRC)
